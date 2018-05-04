@@ -1,0 +1,5 @@
+## Run docker mysql
+docker-compose up
+
+### inorder to connect to mysql database
+docker exec -it mysqldb mysql -uroot -padmin
