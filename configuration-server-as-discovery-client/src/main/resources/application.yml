@@ -1,0 +1,27 @@
+server:
+  port: 8888
+spring: 
+  application:
+    name: configserver  
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/charan556/ConfigData
+          search-paths: ConfigData
+      discovery:
+        service-id: configserver
+        enabled: true
+        
+#enable this if you want config server as discovery client
+# Also enable @EnableEurekaClient in .java file        
+#eureka:
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 3
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    fetch-registry: false
+#    register-with-eureka: true
