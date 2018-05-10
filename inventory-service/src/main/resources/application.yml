@@ -1,0 +1,33 @@
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#    register-with-eureka: true
+#    fetch-registry: false
+#    enabled: false
+#  instance:
+#    prefer-ip-address: true
+
+server:
+  port: ${PORT:8098}
+  
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 3
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${SERVICE_REGISTRY_HOST}:${SERVICE_REGISTRY_PORT}/eureka/
+      # ${EUREKA_URI:http://localhost:8761/eureka}
+
+spring:
+  application:
+    name: inventoryservice
+    
+#logging:
+#  level:
+#    root: TRACE        
+#    org:
+#      springframework:
+#        security: TRACE

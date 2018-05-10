@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: catalogservice
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.99.101:3306/catalog
+#    username: root
+#    password: admin
+#  jpa:
+#    show-sql: true
+
+    

@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: '8383'
+spring:
+  application:
+    name: inventoryservice
+  cloud:
+    config:
+      uri: http://localhost:8888
+  rabbitmq:
+    addresses: localhost:5672
+  profiles:
+    active: default
